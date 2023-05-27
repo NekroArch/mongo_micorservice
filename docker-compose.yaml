@@ -1,0 +1,33 @@
+version: "3.9"
+
+services:
+  mongo_database:
+    container_name: mongo_db
+    image: mongo
+    environment:
+      -  MONGO_INITDB_DATABASE=test
+    ports:
+      - '27017:27017'
+    restart: always
+
+  mongo_service:
+    container_name: mongo_service
+    build: mongo/
+    ports:
+      - '8080:8080'
+      - '5006:5006'
+    environment:
+      - JAVA_TOOL_OPTIONS=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5006
+    depends_on:
+      - mongo_database
+
+  producer_service:
+    container_name: producer_service
+    build: producerService/
+    ports:
+      - '8081:8081'
+      - '5005:5005'
+    environment:
+      - JAVA_TOOL_OPTIONS=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005
+#    depends_on:
+#      - mongo_service

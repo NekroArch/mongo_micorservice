@@ -1,0 +1,182 @@
+16:58:48.796 [main] INFO  c.e.p.ProducerServiceApplication - Starting ProducerServiceApplication using Java 17.0.7 with PID 7984 (C:\mongoService\producerService\target\classes started by qwert in C:\mongoService)
+16:58:48.799 [main] INFO  c.e.p.ProducerServiceApplication - No active profile set, falling back to 1 default profile: "default"
+16:58:49.435 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server
+16:58:49.442 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+16:58:49.457 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.context.ApplicationContextException: Unable to start web server
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:164)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:602)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:733)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:435)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1305)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1294)
+	at com.example.producerservice.ProducerServiceApplication.main(ProducerServiceApplication.java:15)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'tomcatServletWebServerFactory' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/ServletWebServerFactoryConfiguration$EmbeddedTomcat.class]: BeanPostProcessor before instantiation of bean failed
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getWebServerFactory(ServletWebServerApplicationContext.java:218)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:181)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:161)
+	... 8 common frames omitted
+Caused by: java.lang.IllegalArgumentException: @org.aspectj.lang.annotation.AfterThrowing(throwing="", pointcut="", value="", argNames="") is not a valid AspectJ annotation
+	at org.springframework.aop.aspectj.annotation.AbstractAspectJAdvisorFactory$AspectJAnnotation.<init>(AbstractAspectJAdvisorFactory.java:190)
+	at org.springframework.aop.aspectj.annotation.AbstractAspectJAdvisorFactory.findAnnotation(AbstractAspectJAdvisorFactory.java:138)
+	at org.springframework.aop.aspectj.annotation.AbstractAspectJAdvisorFactory.findAspectJAnnotationOnMethod(AbstractAspectJAdvisorFactory.java:126)
+	at org.springframework.aop.aspectj.annotation.ReflectiveAspectJAdvisorFactory.lambda$static$1(ReflectiveAspectJAdvisorFactory.java:90)
+	at org.springframework.core.convert.converter.ConvertingComparator.compare(ConvertingComparator.java:80)
+	at java.base/java.util.Comparator.lambda$thenComparing$36697e65$1(Comparator.java:220)
+	at java.base/java.util.TimSort.countRunAndMakeAscending(TimSort.java:360)
+	at java.base/java.util.TimSort.sort(TimSort.java:220)
+	at java.base/java.util.Arrays.sort(Arrays.java:1307)
+	at java.base/java.util.ArrayList.sort(ArrayList.java:1721)
+	at org.springframework.aop.aspectj.annotation.ReflectiveAspectJAdvisorFactory.getAdvisorMethods(ReflectiveAspectJAdvisorFactory.java:171)
+	at org.springframework.aop.aspectj.annotation.ReflectiveAspectJAdvisorFactory.getAdvisors(ReflectiveAspectJAdvisorFactory.java:135)
+	at org.springframework.aop.aspectj.annotation.BeanFactoryAspectJAdvisorsBuilder.buildAspectJAdvisors(BeanFactoryAspectJAdvisorsBuilder.java:110)
+	at org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator.findCandidateAdvisors(AnnotationAwareAspectJAutoProxyCreator.java:95)
+	at org.springframework.aop.aspectj.autoproxy.AspectJAwareAdvisorAutoProxyCreator.shouldSkip(AspectJAwareAdvisorAutoProxyCreator.java:101)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessBeforeInstantiation(AbstractAutoProxyCreator.java:280)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1127)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1102)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:509)
+	... 15 common frames omitted
+Caused by: java.lang.IllegalStateException: Failed to resolve pointcut expression in: @org.aspectj.lang.annotation.AfterThrowing(throwing="", pointcut="", value="", argNames="")
+	at org.springframework.aop.aspectj.annotation.AbstractAspectJAdvisorFactory$AspectJAnnotation.resolvePointcutExpression(AbstractAspectJAdvisorFactory.java:209)
+	at org.springframework.aop.aspectj.annotation.AbstractAspectJAdvisorFactory$AspectJAnnotation.<init>(AbstractAspectJAdvisorFactory.java:185)
+	... 33 common frames omitted
+17:00:24.171 [main] INFO  c.e.p.ProducerServiceApplication - Starting ProducerServiceApplication using Java 17.0.7 with PID 19512 (C:\mongoService\producerService\target\classes started by qwert in C:\mongoService)
+17:00:24.174 [main] INFO  c.e.p.ProducerServiceApplication - No active profile set, falling back to 1 default profile: "default"
+17:00:24.774 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server
+17:00:24.784 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+17:00:24.798 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.context.ApplicationContextException: Unable to start web server
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:164)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:602)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:733)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:435)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1305)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1294)
+	at com.example.producerservice.ProducerServiceApplication.main(ProducerServiceApplication.java:17)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'tomcatServletWebServerFactory' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/ServletWebServerFactoryConfiguration$EmbeddedTomcat.class]: BeanPostProcessor before instantiation of bean failed
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getWebServerFactory(ServletWebServerApplicationContext.java:218)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:181)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:161)
+	... 8 common frames omitted
+Caused by: java.lang.IllegalArgumentException: @org.aspectj.lang.annotation.AfterThrowing(throwing="", pointcut="", value="", argNames="") is not a valid AspectJ annotation
+	at org.springframework.aop.aspectj.annotation.AbstractAspectJAdvisorFactory$AspectJAnnotation.<init>(AbstractAspectJAdvisorFactory.java:190)
+	at org.springframework.aop.aspectj.annotation.AbstractAspectJAdvisorFactory.findAnnotation(AbstractAspectJAdvisorFactory.java:138)
+	at org.springframework.aop.aspectj.annotation.AbstractAspectJAdvisorFactory.findAspectJAnnotationOnMethod(AbstractAspectJAdvisorFactory.java:126)
+	at org.springframework.aop.aspectj.annotation.ReflectiveAspectJAdvisorFactory.lambda$static$1(ReflectiveAspectJAdvisorFactory.java:90)
+	at org.springframework.core.convert.converter.ConvertingComparator.compare(ConvertingComparator.java:80)
+	at java.base/java.util.Comparator.lambda$thenComparing$36697e65$1(Comparator.java:220)
+	at java.base/java.util.TimSort.countRunAndMakeAscending(TimSort.java:360)
+	at java.base/java.util.TimSort.sort(TimSort.java:220)
+	at java.base/java.util.Arrays.sort(Arrays.java:1307)
+	at java.base/java.util.ArrayList.sort(ArrayList.java:1721)
+	at org.springframework.aop.aspectj.annotation.ReflectiveAspectJAdvisorFactory.getAdvisorMethods(ReflectiveAspectJAdvisorFactory.java:171)
+	at org.springframework.aop.aspectj.annotation.ReflectiveAspectJAdvisorFactory.getAdvisors(ReflectiveAspectJAdvisorFactory.java:135)
+	at org.springframework.aop.aspectj.annotation.BeanFactoryAspectJAdvisorsBuilder.buildAspectJAdvisors(BeanFactoryAspectJAdvisorsBuilder.java:110)
+	at org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator.findCandidateAdvisors(AnnotationAwareAspectJAutoProxyCreator.java:95)
+	at org.springframework.aop.aspectj.autoproxy.AspectJAwareAdvisorAutoProxyCreator.shouldSkip(AspectJAwareAdvisorAutoProxyCreator.java:101)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessBeforeInstantiation(AbstractAutoProxyCreator.java:280)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1127)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1102)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:509)
+	... 15 common frames omitted
+Caused by: java.lang.IllegalStateException: Failed to resolve pointcut expression in: @org.aspectj.lang.annotation.AfterThrowing(throwing="", pointcut="", value="", argNames="")
+	at org.springframework.aop.aspectj.annotation.AbstractAspectJAdvisorFactory$AspectJAnnotation.resolvePointcutExpression(AbstractAspectJAdvisorFactory.java:209)
+	at org.springframework.aop.aspectj.annotation.AbstractAspectJAdvisorFactory$AspectJAnnotation.<init>(AbstractAspectJAdvisorFactory.java:185)
+	... 33 common frames omitted
+17:01:33.407 [main] INFO  c.e.p.ProducerServiceApplication - Starting ProducerServiceApplication using Java 17.0.7 with PID 20192 (C:\mongoService\producerService\target\classes started by qwert in C:\mongoService)
+17:01:33.409 [main] INFO  c.e.p.ProducerServiceApplication - No active profile set, falling back to 1 default profile: "default"
+17:01:33.908 [main] WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'producerServiceApplication': BeanPostProcessor before instantiation of bean failed
+17:01:33.915 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+17:01:33.932 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'producerServiceApplication': BeanPostProcessor before instantiation of bean failed
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:973)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:941)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:733)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:435)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1305)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1294)
+	at com.example.producerservice.ProducerServiceApplication.main(ProducerServiceApplication.java:17)
+Caused by: java.lang.IllegalArgumentException: @org.aspectj.lang.annotation.AfterThrowing(throwing="", pointcut="", value="", argNames="") is not a valid AspectJ annotation
+	at org.springframework.aop.aspectj.annotation.AbstractAspectJAdvisorFactory$AspectJAnnotation.<init>(AbstractAspectJAdvisorFactory.java:190)
+	at org.springframework.aop.aspectj.annotation.AbstractAspectJAdvisorFactory.findAnnotation(AbstractAspectJAdvisorFactory.java:138)
+	at org.springframework.aop.aspectj.annotation.AbstractAspectJAdvisorFactory.findAspectJAnnotationOnMethod(AbstractAspectJAdvisorFactory.java:126)
+	at org.springframework.aop.aspectj.annotation.ReflectiveAspectJAdvisorFactory.lambda$static$1(ReflectiveAspectJAdvisorFactory.java:90)
+	at org.springframework.core.convert.converter.ConvertingComparator.compare(ConvertingComparator.java:80)
+	at java.base/java.util.Comparator.lambda$thenComparing$36697e65$1(Comparator.java:220)
+	at java.base/java.util.TimSort.countRunAndMakeAscending(TimSort.java:360)
+	at java.base/java.util.TimSort.sort(TimSort.java:220)
+	at java.base/java.util.Arrays.sort(Arrays.java:1307)
+	at java.base/java.util.ArrayList.sort(ArrayList.java:1721)
+	at org.springframework.aop.aspectj.annotation.ReflectiveAspectJAdvisorFactory.getAdvisorMethods(ReflectiveAspectJAdvisorFactory.java:171)
+	at org.springframework.aop.aspectj.annotation.ReflectiveAspectJAdvisorFactory.getAdvisors(ReflectiveAspectJAdvisorFactory.java:135)
+	at org.springframework.aop.aspectj.annotation.BeanFactoryAspectJAdvisorsBuilder.buildAspectJAdvisors(BeanFactoryAspectJAdvisorsBuilder.java:110)
+	at org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator.findCandidateAdvisors(AnnotationAwareAspectJAutoProxyCreator.java:95)
+	at org.springframework.aop.aspectj.autoproxy.AspectJAwareAdvisorAutoProxyCreator.shouldSkip(AspectJAwareAdvisorAutoProxyCreator.java:101)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessBeforeInstantiation(AbstractAutoProxyCreator.java:280)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1127)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1102)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:509)
+	... 13 common frames omitted
+Caused by: java.lang.IllegalStateException: Failed to resolve pointcut expression in: @org.aspectj.lang.annotation.AfterThrowing(throwing="", pointcut="", value="", argNames="")
+	at org.springframework.aop.aspectj.annotation.AbstractAspectJAdvisorFactory$AspectJAnnotation.resolvePointcutExpression(AbstractAspectJAdvisorFactory.java:209)
+	at org.springframework.aop.aspectj.annotation.AbstractAspectJAdvisorFactory$AspectJAnnotation.<init>(AbstractAspectJAdvisorFactory.java:185)
+	... 31 common frames omitted
+17:05:20.201 [main] INFO  c.e.p.ProducerServiceApplication - Starting ProducerServiceApplication using Java 17.0.7 with PID 3592 (C:\mongoService\producerService\target\classes started by qwert in C:\mongoService)
+17:05:20.204 [main] INFO  c.e.p.ProducerServiceApplication - No active profile set, falling back to 1 default profile: "default"
+17:05:20.974 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+17:05:20.981 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+17:05:20.982 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+17:05:20.982 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.8]
+17:05:21.061 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+17:05:21.061 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 794 ms
+17:05:21.341 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+17:05:21.344 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+17:05:21.350 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8081"]
+17:05:21.350 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+17:05:21.357 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8081"]
+17:05:21.358 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-8081"]
+17:05:21.363 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+17:05:21.378 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8081 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8081 or configure this application to listen on another port.
+

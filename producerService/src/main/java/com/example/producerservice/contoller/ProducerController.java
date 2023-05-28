@@ -19,11 +19,6 @@ public class ProducerController {
         return producerService.getAll();
     }
 
-    @PostMapping("/{count}")
-    public void saveForCount(@PathVariable Integer count){
-        producerService.save(count);
-    }
-
     @PostMapping()
     public void save(@RequestBody Item item){
         producerService.save(item);

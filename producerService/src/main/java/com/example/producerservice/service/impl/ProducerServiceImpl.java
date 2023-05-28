@@ -32,13 +32,7 @@ public class ProducerServiceImpl implements ProducerService {
         );
     }
 
-    @Log
     public void save(Item item) {
         restTemplate.postForEntity(url + "/api-mongo", item, Item.class);
-    }
-
-    @Log
-    public void save(Integer count) {
-        restTemplate.postForLocation(url + "/api-mongo/" + count , null);
     }
 }

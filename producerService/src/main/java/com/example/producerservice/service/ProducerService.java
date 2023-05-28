@@ -8,6 +8,4 @@ public interface ProducerService {
     List<Item> getAll();
 
     void save(Item item);
-
-    void save(Integer count);
 }
